@@ -44,10 +44,17 @@ dnf config-manager --add-repo http://download.opensuse.org/repositories/home:snw
 dnf install http://repo.linrunner.de/fedora/tlp/repos/releases/tlp-release-1.0-0.noarch.rpm
 dnf install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
 
+############################################################
+# install gnome extensions (very few available in repos)
+# installs:
+# user themes
+# topiconsplus
+# native-window-placement
+dnf install -y gnome-shell-extension-user-theme gnome-shell-extension-topicons-plus gnome-shell-extension-native-window-placement
 
 ############################################################
 # install packages from alt repos
-dnf install -y mpv spotify-client google-chrome-stable chrome-gnome-shell paper-icon-theme 
+dnf install -y mpv spotify-client google-chrome-stable chrome-gnome-shell paper-icon-theme
 
 # TLP
 dnf install -y akmod-tp_smapi akmod-acpi_call kernel-devel
@@ -107,8 +114,6 @@ NetSpeed
 no topleft hot corner
 openweather
 shelltile
-user themes
-Native Window Placement
 Caffeine
 "
 
@@ -116,3 +121,4 @@ Caffeine
 echo "#######################################################################"
 echo ""
 echo "Enjoy Fedora 25, shit should be easy so don't fuck it up."
+echo "Restart X session to apply gnome extensions"
